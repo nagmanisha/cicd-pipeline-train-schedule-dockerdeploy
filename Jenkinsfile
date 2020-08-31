@@ -12,7 +12,7 @@ pipeline {
             when { branch 'master'}
             steps { 
                 script {
-                    app = docker.build("nagmanisha/trainSchedule")
+                    app = docker.build("nagmanisha/train-schedule")
                     app.inside {
                         sh 'echo $(curl localhost:8080)'
                     }
